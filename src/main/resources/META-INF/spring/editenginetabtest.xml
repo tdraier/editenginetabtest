@@ -6,7 +6,7 @@
   
     <bean id="Engine.Tab.MyTest" class="org.jahia.services.uicomponents.bean.editmode.EngineTab">
         <property name="id" value="test"/>
-        <property name="titleKey" value="label.engineTab.test"/>
+        <property name="titleKey" value="label.engineTab.test@resources.editenginetabtest"/>
         <property name="tabItem">
             <bean class="org.jahia.ajax.gwt.client.widget.contentengine.CustomEditEngineTabItem">
                 <property name="onInitMethodName" value="myInit"/>

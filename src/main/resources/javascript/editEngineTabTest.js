@@ -1,8 +1,8 @@
 function myInit(data) {
-    return $.parseHTML("<div> " +
-        "<input name=\"testpropertyvalue\" id=\"testpropertyvalue\" value=\"" + (data.isNewNode ? "" : data.getProperty("j:testproperty"))+ "\"/>" +
-        "" +
-        "</div>")
+    return $.parseHTML("<div> " + 
+                       "<input name=\"testpropertyvalue\" id=\"testpropertyvalue\" value=\"" + (data.isNewNode ? "" : data.getProperty("j:testproperty"))+ "\"/>" +
+                       "<div id=\"myLangCode\">" + data.getLanguage() + "</div>" +
+                       "</div>" )
         [0];
 }
 
@@ -11,6 +11,6 @@ function myDoSave(node) {
     node.setProperty("j:testproperty",$('#testpropertyvalue').val(), 1);
 }
 
-function myLanguageChange(lang) {
-    window.alert("new language "+lang);
+function myLanguageChange(data) {
+    $('#myLangCode').html(data.getLanguage());
 }
